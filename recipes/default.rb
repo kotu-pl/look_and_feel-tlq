@@ -53,6 +53,8 @@ if node[:environment] == 'production'
   end
 
   service 'ssh' do
+    start_command "service ssh start"
+    restart_command "service ssh restart"
     action :restart
   end
 end
