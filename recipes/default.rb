@@ -35,7 +35,7 @@ if node[:environment] == 'production'
   banner_path = '/etc/ssh_banner'
 
   seds << 's/^Banner/#Banner/g'
-  echos << "Banner #{banner_path}"
+  echos << "\nBanner #{banner_path}"
 
   template banner_path do
     owner 'root'
